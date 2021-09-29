@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import SearchInput from '../../components/SearchInput/SearchInput';
 import './styles.css';
 
-
 const api = 'https://kitsu.io/api/edge/'
 
 export default function Home() {
@@ -12,6 +11,8 @@ export default function Home() {
     
     useEffect(() => {
         if (text) {
+            setInfo({});
+
             fetch(`${api}anime?filter[text]=${text}&page[limit]=10`)
                 .then((res) => res.json())
                 .then((res) => {
@@ -28,6 +29,8 @@ export default function Home() {
                 value={text} 
                 onChange={(search) => setText(search)} 
             />
+
+            {text && !info.data && (<span>Loading...</span>)}
 
                 <div className="animes">
                     {info.data && (
