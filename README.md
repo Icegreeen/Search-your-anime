@@ -10,7 +10,7 @@
 * Run `npm i` to install the required dependencies.
 * Run `yarn start` or `npm start` to spin up the development server.
 
-Open [http://localhost:3000](http://localhost:3000) or https://search-your-anime.netlify.app/ with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
 
